@@ -66,6 +66,9 @@ describe('Sensor model tests', () => {
     test('valeur de la propriété name du troisieme Sensor', () => {
       expect(sensorObjects[2]._name).toBe('Ventilateur Ordinateur Bureau');
     });
+    test('valeur de la propriété \'type\' du deuxieme Sensor', () => {
+      expect(sensorObjects[2]._type._name).toBe('FAN_SPEED');
+    });
     
   });
 });
