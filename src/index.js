@@ -27,4 +27,18 @@ export class SensorType {
     this._name = name;
   }
 }
+export class Sensor {
 
+  constructor(id, name, sensorType, data) {
+    this._id = id;
+    this._name = name;
+    this._type = new SensorType(sensorType);
+    if ('values' in data) {
+      this._data = new TimeSeries(data.values, data.labels);
+    } else if ('value' in data) {
+      this._data = new Datum(data.value);
+    } else {
+      this._data = new Data(data);
+    }
+  }
+}
