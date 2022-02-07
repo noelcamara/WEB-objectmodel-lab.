@@ -53,6 +53,9 @@ describe('Sensor model tests', () => {
     test('valeur de la propriété \'type\' du deuxieme Sensor', () => {
       expect(sensorObjects[1]._type._name).toBe('DOOR');
     });
+    test('type de la propriété \'data\' du deuxieme Sensor', () => {
+      expect(sensorObjects[1]._data instanceof Datum).toBe(true);
+    });
     
   });
 });
