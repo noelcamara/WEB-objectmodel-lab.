@@ -1,13 +1,22 @@
 const fs = require('fs').promises;
 
-import { version } from '.';
+import { version,
+Sensor,
+Datum,
+TimeSeries
+} from '.';
 
 let data;
+let sensorObjects = [];
+
 beforeAll(async () => {
   data = await fs.readFile('./resources/sensors_data.json', {
     encoding: 'utf8',
   });
   data = JSON.parse(data);
+   data.forEach(s => {
+    sensorObjects.push(new Sensor(s.id, s.name, s.type, s.data));
+  });
 });
 
 describe('Sensor model tests', () => {
@@ -19,6 +28,10 @@ describe('Sensor model tests', () => {
       expect(version()).toBe('1.0.0');
     });
   });
-  /* TODO: Écrire ici la suite de tests pour le modèle objet.*/
-  //
+  
+   describe('suite des tests', () => {
+    test('valeur de la propriété id du premier Sensor', () => {
+      expect(sensorObjects[0]._id).toBe(1234);
+    });
+  });
 });
