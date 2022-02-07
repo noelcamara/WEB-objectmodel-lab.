@@ -20,3 +20,11 @@ export class Datum extends Data {
     this._value = value;
   }
 }
+// Using of the enum pattern
+export class SensorType {
+
+  constructor(name) {
+    this._name = name;
+  }
+}
+
