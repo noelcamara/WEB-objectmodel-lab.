@@ -56,6 +56,9 @@ describe('Sensor model tests', () => {
     test('type de la propriété \'data\' du deuxieme Sensor', () => {
       expect(sensorObjects[1]._data instanceof Datum).toBe(true);
     });
+    test('valeur de la propriété \'value\' du deuxieme Sensor', () => {
+      expect(sensorObjects[1]._data._value).toBe(0);
+    });
     
   });
 });
