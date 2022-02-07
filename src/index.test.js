@@ -69,6 +69,10 @@ describe('Sensor model tests', () => {
     test('valeur de la propriété \'type\' du deuxieme Sensor', () => {
       expect(sensorObjects[2]._type._name).toBe('FAN_SPEED');
     });
+    test('type de la propriété \'data\' du troisieme Sensor', () => {
+      expect(sensorObjects[2]._data instanceof TimeSeries)
+        .toBe(true);
+    });
     
   });
 });
