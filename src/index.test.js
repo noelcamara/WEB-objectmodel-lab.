@@ -50,7 +50,9 @@ describe('Sensor model tests', () => {
     test('valeur de la propriété name du deuxieme Sensor', () => {
       expect(sensorObjects[1]._name).toBe('Porte du Garage');
     });
-   
+    test('valeur de la propriété \'type\' du deuxieme Sensor', () => {
+      expect(sensorObjects[1]._type._name).toBe('DOOR');
+    });
     
   });
 });
