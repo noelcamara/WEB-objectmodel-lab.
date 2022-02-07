@@ -44,5 +44,10 @@ describe('Sensor model tests', () => {
         .toBe(true);
     });
     
+    test('valeur de la propriété id du deuxieme Sensor', () => {
+      expect(sensorObjects[1]._id).toBe(10245);
+    });
+   
+    
   });
 });
