@@ -39,6 +39,10 @@ describe('Sensor model tests', () => {
     test('valeur de la propriété \'type\' du premier Sensor', () => {
       expect(sensorObjects[0]._type._name).toBe('TEMPERATURE');
     });
+    test('type de la propriété \'data\' du premier Sensor', () => {
+      expect(sensorObjects[0]._data instanceof TimeSeries)
+        .toBe(true);
+    });
     
   });
 });
