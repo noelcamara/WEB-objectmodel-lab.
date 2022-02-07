@@ -11,3 +11,12 @@ export class TimeSeries extends Data {
     this._labels = labels;
   }
 }
+
+export class Datum extends Data {
+
+
+  constructor(value) {
+    super();
+    this._value = value;
+  }
+}
