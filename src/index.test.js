@@ -36,5 +36,9 @@ describe('Sensor model tests', () => {
     test('valeur de la propriété name du premier Sensor', () => {
       expect(sensorObjects[0]._name).toBe('Température Bureau');
     });
+    test('valeur de la propriété \'type\' du premier Sensor', () => {
+      expect(sensorObjects[0]._type._name).toBe('TEMPERATURE');
+    });
+    
   });
 });
