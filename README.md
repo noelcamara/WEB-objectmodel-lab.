@@ -8,7 +8,7 @@
 
 |Nom|Prénom|login|email|
 |--|--|--|--|
-| ... | ... | ... | ... |
+| Camara | Noel | cn196097 | noel.camara@etu.univ-lehavre.fr|
 
 See <https://pigne.org/teaching/webdev1/lab/object-model-lab> for instructions.
 
